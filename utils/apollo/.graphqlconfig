@@ -4,7 +4,7 @@
   "extensions": {
     "endpoints": {
       "PancakeSwap Exchange LITE": {
-        "url": "https://api.bscgraph.org/subgraphs/name/pancakeswap/exchange-lite",
+        "url": "https://api.thegraph.com/subgraphs/name/autoshark-finance/exchange",
         "headers": {
           "user-agent": "JS GraphQL"
         },
