@@ -44,7 +44,7 @@ export async function getTokenByAddress(address: string): Promise<Token> {
 export async function getTopPairs(): Promise<MappedDetailedPair[]> {
   const epochSecond = Math.round(new Date().getTime() / 1000);
   const firstBlock = await getBlockFromTimestamp(epochSecond - 86400);
-
+  console.log({ epochSecond, firstBlock });
   if (!firstBlock) {
     throw new Error("Failed to fetch blocks from the subgraph");
   }

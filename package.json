@@ -1,7 +1,7 @@
 {
   "name": "pancake-info-api",
   "version": "1.0.0",
-  "description": "Serverless API implementation for PancakeSwap on-chain data query.",
+  "description": "Serverless API implementation for AutoShark on-chain data query.",
   "repository": "git@github.com:autoshark-finance/autoshark-info-api.git",
   "author": "AutoShark",
   "license": "MIT",
