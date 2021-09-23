@@ -25,7 +25,6 @@ export const TOKEN_BY_ADDRESS = gql`
       name
       symbol
       derivedETH
-      derivedUSD
     }
   }
 `;
@@ -36,7 +35,6 @@ export const TOP_PAIRS = gql`
     name
     symbol
     derivedETH
-    derivedUSD
   }
 
   query TopPairs($limit: Int!, $excludeTokenIds: [String!]!) {

@@ -691,13 +691,13 @@ export type TokenQuery = (
   { readonly __typename?: 'Query' }
   & { readonly token?: Maybe<(
     { readonly __typename?: 'Token' }
-    & Pick<Token, 'id' | 'name' | 'symbol' | 'derivedETH' | 'derivedUSD'>
+    & Pick<Token, 'id' | 'name' | 'symbol' | 'derivedETH'>
   )> }
 );
 
 export type TokenInfoFragment = (
   { readonly __typename?: 'Token' }
-  & Pick<Token, 'id' | 'name' | 'symbol' | 'derivedETH' | 'derivedUSD'>
+  & Pick<Token, 'id' | 'name' | 'symbol' | 'derivedETH'>
 );
 
 export type TopPairsQueryVariables = Exact<{
