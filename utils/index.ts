@@ -1,9 +1,11 @@
 import BigNumber from "bignumber.js";
 import { BLACKLIST } from "./constants/blacklist";
 import { client } from "./apollo/client";
-import { TOP_PAIRS, PAIRS_VOLUME_QUERY, TOKEN_BY_ADDRESS } from "./apollo/queries";
+import { TOP_PAIRS, PAIRS_VOLUME_QUERY, TOKEN_BY_ADDRESS, BUNDLE_BY_ID } from "./apollo/queries";
 import { getBlockFromTimestamp } from "./blocks/queries";
 import {
+  BundleQuery,
+  BundleQueryVariables,
   PairsVolumeQuery,
   PairsVolumeQueryVariables,
   TokenQuery,
@@ -115,4 +117,15 @@ export async function getTopPairs(): Promise<MappedDetailedPair[]> {
       }
     ) ?? []
   );
+}
+
+export async function getBundle(id: string): Promise<[string]> {
+  return client
+    .query<BundleQuery, BundleQueryVariables>({
+      query: BUNDLE_BY_ID,
+      variables: {
+        id,
+      },
+    })
+    .then(({ data: { bundle } }): [string] => [bundle?.ethPrice]);
 }

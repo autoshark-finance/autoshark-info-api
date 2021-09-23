@@ -10,13 +10,21 @@ export const PAIRS_VOLUME_QUERY = gql`
   }
 `;
 
+export const BUNDLE_BY_ID = gql`
+  query Bundle($id: ID!) {
+    bundle(id: $id) {
+      ethPrice
+    }
+  }
+`;
+
 export const TOKEN_BY_ADDRESS = gql`
   query Token($id: ID!) {
     token(id: $id) {
       id
       name
       symbol
-      derivedBNB
+      derivedETH
       derivedUSD
     }
   }
@@ -27,7 +35,7 @@ export const TOP_PAIRS = gql`
     id
     name
     symbol
-    derivedBNB
+    derivedETH
     derivedUSD
   }
 
@@ -49,7 +57,7 @@ export const TOP_PAIRS = gql`
       reserve1
       volumeToken0
       volumeToken1
-      reserveBNB
+      reserveETH
       reserveUSD
     }
   }

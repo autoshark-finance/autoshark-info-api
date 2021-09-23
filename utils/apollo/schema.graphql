@@ -6,7 +6,7 @@ schema {
 }
 
 type Bundle {
-    bnbPrice: BigDecimal!
+    ethPrice: BigDecimal!
     id: ID!
 }
 
@@ -19,17 +19,17 @@ type Pair {
     id: ID!
     reserve0: BigDecimal!
     reserve1: BigDecimal!
-    reserveBNB: BigDecimal!
+    reserveETH: BigDecimal!
     reserveUSD: BigDecimal!
     token0: Token!
     token0Price: BigDecimal!
     token1: Token!
     token1Price: BigDecimal!
-    trackedReserveBNB: BigDecimal!
+    trackedReserveETH: BigDecimal!
     trackedReserveUSD: BigDecimal!
-    untrackedVolumeBNB: BigDecimal!
+    untrackedVolumeETH: BigDecimal!
     untrackedVolumeUSD: BigDecimal!
-    volumeBNB: BigDecimal!
+    volumeETH: BigDecimal!
     volumeToken0: BigDecimal!
     volumeToken1: BigDecimal!
     volumeUSD: BigDecimal!
@@ -194,7 +194,7 @@ type Subscription {
 
 type Token {
     decimals: BigInt!
-    derivedBNB: BigDecimal!
+    derivedETH: BigDecimal!
     derivedUSD: BigDecimal!
     id: ID!
     name: String!
@@ -250,17 +250,17 @@ enum Pair_orderBy {
     id
     reserve0
     reserve1
-    reserveBNB
+    reserveETH
     reserveUSD
     token0
     token0Price
     token1
     token1Price
-    trackedReserveBNB
+    trackedReserveETH
     trackedReserveUSD
-    untrackedVolumeBNB
+    untrackedVolumeETH
     untrackedVolumeUSD
-    volumeBNB
+    volumeETH
     volumeToken0
     volumeToken1
     volumeUSD
@@ -268,7 +268,7 @@ enum Pair_orderBy {
 
 enum Token_orderBy {
     decimals
-    derivedBNB
+    derivedETH
     derivedUSD
     id
     name
@@ -395,14 +395,14 @@ input Pair_filter {
     reserve1_lte: BigDecimal
     reserve1_not: BigDecimal
     reserve1_not_in: [BigDecimal!]
-    reserveBNB: BigDecimal
-    reserveBNB_gt: BigDecimal
-    reserveBNB_gte: BigDecimal
-    reserveBNB_in: [BigDecimal!]
-    reserveBNB_lt: BigDecimal
-    reserveBNB_lte: BigDecimal
-    reserveBNB_not: BigDecimal
-    reserveBNB_not_in: [BigDecimal!]
+    reserveETH: BigDecimal
+    reserveETH_gt: BigDecimal
+    reserveETH_gte: BigDecimal
+    reserveETH_in: [BigDecimal!]
+    reserveETH_lt: BigDecimal
+    reserveETH_lte: BigDecimal
+    reserveETH_not: BigDecimal
+    reserveETH_not_in: [BigDecimal!]
     reserveUSD: BigDecimal
     reserveUSD_gt: BigDecimal
     reserveUSD_gte: BigDecimal
@@ -455,14 +455,14 @@ input Pair_filter {
     token1_not_in: [String!]
     token1_not_starts_with: String
     token1_starts_with: String
-    trackedReserveBNB: BigDecimal
-    trackedReserveBNB_gt: BigDecimal
-    trackedReserveBNB_gte: BigDecimal
-    trackedReserveBNB_in: [BigDecimal!]
-    trackedReserveBNB_lt: BigDecimal
-    trackedReserveBNB_lte: BigDecimal
-    trackedReserveBNB_not: BigDecimal
-    trackedReserveBNB_not_in: [BigDecimal!]
+    trackedReserveETH: BigDecimal
+    trackedReserveETH_gt: BigDecimal
+    trackedReserveETH_gte: BigDecimal
+    trackedReserveETH_in: [BigDecimal!]
+    trackedReserveETH_lt: BigDecimal
+    trackedReserveETH_lte: BigDecimal
+    trackedReserveETH_not: BigDecimal
+    trackedReserveETH_not_in: [BigDecimal!]
     trackedReserveUSD: BigDecimal
     trackedReserveUSD_gt: BigDecimal
     trackedReserveUSD_gte: BigDecimal
@@ -471,14 +471,14 @@ input Pair_filter {
     trackedReserveUSD_lte: BigDecimal
     trackedReserveUSD_not: BigDecimal
     trackedReserveUSD_not_in: [BigDecimal!]
-    untrackedVolumeBNB: BigDecimal
-    untrackedVolumeBNB_gt: BigDecimal
-    untrackedVolumeBNB_gte: BigDecimal
-    untrackedVolumeBNB_in: [BigDecimal!]
-    untrackedVolumeBNB_lt: BigDecimal
-    untrackedVolumeBNB_lte: BigDecimal
-    untrackedVolumeBNB_not: BigDecimal
-    untrackedVolumeBNB_not_in: [BigDecimal!]
+    untrackedVolumeETH: BigDecimal
+    untrackedVolumeETH_gt: BigDecimal
+    untrackedVolumeETH_gte: BigDecimal
+    untrackedVolumeETH_in: [BigDecimal!]
+    untrackedVolumeETH_lt: BigDecimal
+    untrackedVolumeETH_lte: BigDecimal
+    untrackedVolumeETH_not: BigDecimal
+    untrackedVolumeETH_not_in: [BigDecimal!]
     untrackedVolumeUSD: BigDecimal
     untrackedVolumeUSD_gt: BigDecimal
     untrackedVolumeUSD_gte: BigDecimal
@@ -487,14 +487,14 @@ input Pair_filter {
     untrackedVolumeUSD_lte: BigDecimal
     untrackedVolumeUSD_not: BigDecimal
     untrackedVolumeUSD_not_in: [BigDecimal!]
-    volumeBNB: BigDecimal
-    volumeBNB_gt: BigDecimal
-    volumeBNB_gte: BigDecimal
-    volumeBNB_in: [BigDecimal!]
-    volumeBNB_lt: BigDecimal
-    volumeBNB_lte: BigDecimal
-    volumeBNB_not: BigDecimal
-    volumeBNB_not_in: [BigDecimal!]
+    volumeETH: BigDecimal
+    volumeETH_gt: BigDecimal
+    volumeETH_gte: BigDecimal
+    volumeETH_in: [BigDecimal!]
+    volumeETH_lt: BigDecimal
+    volumeETH_lte: BigDecimal
+    volumeETH_not: BigDecimal
+    volumeETH_not_in: [BigDecimal!]
     volumeToken0: BigDecimal
     volumeToken0_gt: BigDecimal
     volumeToken0_gte: BigDecimal
@@ -530,14 +530,14 @@ input Token_filter {
     decimals_lte: BigInt
     decimals_not: BigInt
     decimals_not_in: [BigInt!]
-    derivedBNB: BigDecimal
-    derivedBNB_gt: BigDecimal
-    derivedBNB_gte: BigDecimal
-    derivedBNB_in: [BigDecimal!]
-    derivedBNB_lt: BigDecimal
-    derivedBNB_lte: BigDecimal
-    derivedBNB_not: BigDecimal
-    derivedBNB_not_in: [BigDecimal!]
+    derivedETH: BigDecimal
+    derivedETH_gt: BigDecimal
+    derivedETH_gte: BigDecimal
+    derivedETH_in: [BigDecimal!]
+    derivedETH_lt: BigDecimal
+    derivedETH_lte: BigDecimal
+    derivedETH_not: BigDecimal
+    derivedETH_not_in: [BigDecimal!]
     derivedUSD: BigDecimal
     derivedUSD_gt: BigDecimal
     derivedUSD_gte: BigDecimal

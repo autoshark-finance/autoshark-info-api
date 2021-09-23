@@ -23,7 +23,7 @@ export default async function (req: VercelRequest, res: VercelResponse): Promise
         name: token?.name,
         symbol: token?.symbol,
         price: token?.derivedUSD,
-        price_BNB: token?.derivedBNB,
+        price_BNB: token?.derivedETH,
       },
     });
   } catch (error: any) {
