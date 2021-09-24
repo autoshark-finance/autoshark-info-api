@@ -1,18 +1,18 @@
 # Documentation
 
-All PancakeSwap pairs consist of two different tokens. BNB is not a native currency in PancakeSwap, and is represented only by WBNB in the pairs. 
+All AutoShark pairs consist of two different tokens. BNB is not a native currency in AutoShark, and is represented only by WBNB in the pairs. 
 
-The canonical WBNB address used by the PancakeSwap interface is `0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c`.
+The canonical WBNB address used by the AutoShark interface is `0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c`.
 
 Results are cached for 5 minutes (or 300 seconds).
 
-## [`/summary`](https://api.pancakeswap.info/api/summary)
+## [`/summary`](https://api.autoshark.info/api/summary)
 
-Returns data for the top ~1000 PancakeSwap pairs, sorted by reserves. 
+Returns data for the top ~1000 AutoShark pairs, sorted by reserves. 
 
 ### Request
 
-`GET https://api.pancakeswap.info/api/summary`
+`GET https://api.autoshark.info/api/summary`
 
 ### Response
 
@@ -32,13 +32,13 @@ Returns data for the top ~1000 PancakeSwap pairs, sorted by reserves.
 }
 ```
 
-## [`/tokens`](https://api.pancakeswap.info/api/tokens)
+## [`/tokens`](https://api.autoshark.info/api/tokens)
 
-Returns the tokens in the top ~1000 pairs on PancakeSwap, sorted by reserves.
+Returns the tokens in the top ~1000 pairs on AutoShark, sorted by reserves.
 
 ### Request
 
-`GET https://api.pancakeswap.info/api/tokens`
+`GET https://api.autoshark.info/api/tokens`
 
 ### Response
 
@@ -57,13 +57,13 @@ Returns the tokens in the top ~1000 pairs on PancakeSwap, sorted by reserves.
 }
 ```
 
-## [`/tokens/0x...`](https://api.pancakeswap.info/api/tokens/0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82)
+## [`/tokens/0x...`](https://api.autoshark.info/api/tokens/0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82)
 
 Returns the token information, based on address.
 
 ### Request
 
-`GET https://api.pancakeswap.info/api/tokens/0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82`
+`GET https://api.autoshark.info/api/tokens/0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82`
 
 ### Response
 
@@ -79,13 +79,13 @@ Returns the token information, based on address.
 }
 ```
 
-## [`/pairs`](https://api.pancakeswap.info/api/pairs)
+## [`/pairs`](https://api.autoshark.info/api/pairs)
 
-Returns data for the top ~1000 PancakeSwap pairs, sorted by reserves.
+Returns data for the top ~1000 AutoShark pairs, sorted by reserves.
 
 ### Request
 
-`GET https://api.pancakeswap.info/api/pairs`
+`GET https://api.autoshark.info/api/pairs`
 
 ### Response
 

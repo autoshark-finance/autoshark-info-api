@@ -1,9 +1,9 @@
 {
-  "name": "PancakeSwap Exchange LITE",
+  "name": "AutoShark Exchange LITE",
   "schemaPath": "schema.graphql",
   "extensions": {
     "endpoints": {
-      "PancakeSwap Exchange LITE": {
+      "AutoShark Exchange LITE": {
         "url": "https://api.thegraph.com/subgraphs/name/autoshark-finance/exchange",
         "headers": {
           "user-agent": "JS GraphQL"
